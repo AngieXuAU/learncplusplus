@@ -9,4 +9,4 @@ int main()
 	d = n-c;
 	printf("%.2lf\n",d);
 	return 0;
-}
+} 
