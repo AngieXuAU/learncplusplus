@@ -3,8 +3,8 @@
 using namespace std;
 int main()
 {
-	float a;
+	double a;
 	cin>>a;
-	printf("%.3lf", a);
+	printf("%.3lld", a);
 	return 0;
 }
