@@ -4,11 +4,10 @@
 using namespace std;
 int main()
 {
-	int TotalApples, EatenApples;
-	float EatRate, Hours;
+	int TotalApples, EatenApples, EatRate, Hours;
 	cout<<"Insert total apples, hours taken to eat an apple and hours passed: ";
 	cin>>TotalApples>>EatRate>>Hours;
-	EatenApples=ceil(Hours/EatRate);
+	EatenApples=ceil(Hours*1.0/EatRate);
 	TotalApples=TotalApples-EatenApples;
 	cout<<(TotalApples);
 }
