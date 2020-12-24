@@ -3,13 +3,13 @@
 using namespace std;
 int main()
 {
-	float Float;
+	float Float, absValue;
 	cout<<"Write a float: ";
 	cin>>Float;
 	if(Float>=0){
-		cout<<Float;
+		absValue=Float;
+	} else {
+		absValue=(-1.0*Float);
 	}
-	if(Float<0){
-		cout<<abs(Float);
-	}
+	printf("%.2f", absValue);
 }
