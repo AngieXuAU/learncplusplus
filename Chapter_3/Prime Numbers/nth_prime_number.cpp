@@ -12,7 +12,6 @@ int main(){
 		}
 		if(x>floor(sqrt(i))){
 			sum+=1;
-		//	cout<<i<<"\t"<<sum<<endl;
 		}
 	}
 	cout<<i-1;
