@@ -1,15 +1,14 @@
 #include<iostream>
 using namespace std;
 int main(){
-	int i, j, Limit, Portion1, Portion2;
-	cin>>Limit;
-	for(i=1; i<=Limit; i++){
-		Portion1=i;
-		for(j=1; j<=Limit; j++){
-			Portion2=j;
-			if(Portion1+Portion2==Limit){
-				cout<<Portion1<<"\t"<<Portion2<<endl;
-			}
+	int c, x, y;
+	cout<<"Write down c: ";
+	cin>>c;
+	for(x=0; x<=c; x++){
+		for(y=0; y<=1000; ++y){
+		if(x*y==c){
+			cout<<x<<"\t"<<y<<endl;
+		}
 		}
 	}
 }
