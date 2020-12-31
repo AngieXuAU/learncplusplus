@@ -12,7 +12,7 @@ int main(){
 			if(j<maxn){
 				cout<<", ";
 			} else if (j==maxn){
-				cout<<": "<<endl<<endl<<endl;
+				cout<<": "<<endl<<endl;
 				continue;
 			}
 		}
