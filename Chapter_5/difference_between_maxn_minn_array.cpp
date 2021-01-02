@@ -11,14 +11,11 @@ int main(){
 	}
 	
 	MaxN=Numbers[0];
+	MinN=Numbers[0];
 	for(int i=0; i<Input; i++){
 		if(Numbers[i]>MaxN){
 			MaxN=Numbers[i];
 		}
-	}
-	
-	MinN=Numbers[0];
-	for(int i=0; i<Input; i++){
 		if(Numbers[i]<MinN){
 			MinN=Numbers[i];
 		}
