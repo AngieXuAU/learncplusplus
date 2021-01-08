@@ -11,8 +11,6 @@ int main(){
 		if(int(Input[i])>=48 && int(Input[i])<=57){
 			Number[int(Input[i])-48] += 1;
 		}
-		
-		
 //		switch(Input[i]){
 //			case '0':
 //				Number[0]+=1;
