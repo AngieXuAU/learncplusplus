@@ -13,6 +13,9 @@ int main(){
 	for(int i=0; i<=26; ++i){
 		if(Letter[i]==1){
 			cout<<char(i+97);
+			return 0;
 		}
 	}
+	
+	cout<<"No";
 }
