@@ -9,10 +9,10 @@ int main(){
 	} else {
 		for(Rep1=0; Rep1<Total; Rep1++){
 			for(int i=0; i<sqrt(Rep1); i++){
-				(sqrt(Rep1) %i==0);
-					Num1=Rep1;
-					Total+=Num1;
-				}
+//				if(sqrt(Rep1) % i==0);
+//					Num1=Rep1;
+//					Total+=Num1;
+//				}
 			}
 		}
 	}

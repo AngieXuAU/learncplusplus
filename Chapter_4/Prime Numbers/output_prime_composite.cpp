@@ -6,7 +6,7 @@ int main(){
 	cin>>numeral;
 	for(integers=1; integers<=numeral; integers++){
 	}
-	if(sqrt(numeral)%integers!=0){
+	if(int(sqrt(numeral))%integers!=0){
 			cout<<"Prime";
 	} else {
 			cout<<"Composite";
