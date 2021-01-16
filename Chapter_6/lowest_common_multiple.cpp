@@ -1,20 +1,20 @@
 #include <iostream>
 using namespace std;
 int x, y;
-int GCD(int x, int y){
-    int Remainder=x%y;
-    while (Remainder!=0){
+int gcd(int x, int y){
+    int r=x%y;
+    while (r!=0){
         x=y;
-        y=Remainder;
-        Remainder='x';
+        y=r;
+        r=x%y;
     }
-    return 0;
+    return y;
 }
-int LCM(){
-    return x*y/GCD(x, y);
+int lcm(){
+    return x*y/gcd(x, y);
 }
 int main(){
     cin>>x>>y;
-    cout<<LCM()<<endl;
+    cout<<lcm()<<endl;
     return 0;
 }

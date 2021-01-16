@@ -13,17 +13,11 @@ int main(){
     return 0;
 }
 int Prime(int x) {
-    int j;
-    if (x == 2) {
-        return 1;
-    }
-    j = 1;
-    while (j <= sqrt(x) && x % j != 0) {
-        j++;
-        if (x % j == 0) {
-            return 0;
-        } else {
-            return 1;
+    int  Primary= 1;
+    for (int i = 2; i <= sqrt(x); ++i) {
+        if (x%i==0){
+            Primary= 0;
         }
     }
+    return Primary;
 }
