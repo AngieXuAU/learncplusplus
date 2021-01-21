@@ -8,10 +8,12 @@ void Find(char w[10], char t[200]){
     Counter=0;
     for (int i = 0; i < strlen(t); ++i) {
         while (t[i]!=' '){
-            if (w[++k]==t[i]){
-                if (j=-1) {
-                    First = i;
-                    j = 0;
+            for (int l = 0; l < strlen(w); ++l) {
+                if (w[++k]==t[i]){
+                    if (j=-1) {
+                        First = i;
+                        j = 0;
+                    }
                 }
             }
         }
