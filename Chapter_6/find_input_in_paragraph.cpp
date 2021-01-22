@@ -1,37 +1,33 @@
 #include <cstring>
 #include <iostream>
 using namespace std;
-bool Check(char t[], char w[], int s, int e){
-    int k=0;
-    for (int i = s; i <= e; ++i) {
-        if (t[i]!=w[k++]){
+bool Check(char text[], char word[], int start_position, int end_position){
+    if (end_position - start_position + 1 != strlen(word)) {
+        return false;
+    }
+    for (int i = 0; i < strlen(word); ++i) {
+        if (word[i] != text[i+start_position]){
             return false;
         }
     }
     return true;
 }
-void Find(char w[], char t[]){
-    int j, First, Counter, Start, End;
-    j=-1;
-    Counter=0;
-
-    for (Start = 0; Start < strlen(t); Start++) {
-        if (t[Start]!=' '){
-            for (End = Start;  End < strlen(t); ++End) {
-                if (t[End]==' '){
-                    break;
-                }
-                if (Check(t, w, Start, End)){
-                    Counter++;
-                    if (j=-1){
-                        First=Start;
-                        j=0;
-                    }
+void Find(char Word[], char Text[]){
+    bool Matched= false;
+    int Counter=0, Start, End;
+    for (Start = 0; Start < strlen(Text); Start++) {
+        if (Text[Start] != ' ') {
+            End=Start+strlen(Word)-1;
+            if (Check(Text, Word, Start, End)) {
+                Counter++;
+                if (!Matched) {
+                    cout<<Start;
+                    Matched = true;
                 }
             }
         }
     }
-    cout<<First<<"\t"<<Counter;
+    cout<<"\t"<<Counter;
 }
 
 int main(){
@@ -40,7 +36,10 @@ int main(){
     strlwr(Word);
     gets(Text);
     strlwr(Text);
-
     Find(Word, Text);
+
+//    char word[10] = "is";
+//    char text[200] = "this is a test";
+//    cout<<Check(text, word, 5,6);
     return 0;
 }
