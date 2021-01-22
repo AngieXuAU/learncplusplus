@@ -3,13 +3,12 @@
 using namespace std;
 
 bool Prime(int n){
-    bool Primary= true;
     for (int i = 2; i <= sqrt(n); ++i) {
         if (n%i==0){
-            Primary= false;
+            return false;
         }
     }
-    return Primary;
+    return true;
 }
 
 int main(){
