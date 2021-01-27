@@ -1,20 +1,20 @@
 #include <iostream>
 using namespace std;
 int Reverse(int Numeral){
-    int Other, LastDigit, Opposite=0;
-    LastDigit=Numeral%10;
-    Other=(Numeral-LastDigit)/10;
-    if (Other==0){
-        return Opposite;
+    int Other, LastDigit;
+    if(Numeral<10){
+        cout<<Numeral;
+        return Numeral;
     } else {
-        Opposite=LastDigit*10+Reverse(Other);
+        LastDigit=Numeral % 10;
+        Other=(Numeral-LastDigit)/10;
+        cout<<LastDigit;
+        return Reverse(Other);
     }
-    return Opposite;
 }
 int main(){
-    int Input, ReversedInput;
+    int Input;
     cin>>Input;
-    ReversedInput=Reverse(Input);
-    cout<<ReversedInput;
+    Reverse(Input);
     return 0;
 }
