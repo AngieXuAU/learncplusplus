@@ -2,23 +2,21 @@
 #include <iostream>
 using namespace std;
 char Original[100];
-void ReverseFunc(int first, int last){
-    char first_char, last_char, temp;
-    int index=0;
-    if (index>=(last-first)/2){
-        return;
-    } else {
 
+void ReverseFunc(int length_of_original) {
+    char ReversedString[100], LastChar, Length;
+    LastChar=Original[length_of_original-1];
+    for (int i = 0; i < length_of_original-1; ++i) {
+        ReversedString[i]=Original[i];
     }
+    cout<<LastChar;
+    Length=strlen(ReversedString);
+    ReverseFunc(Length);
 }
 int main(){
-    int Last, i;
-
+    int i=0;
     do {
-        cin>>Original[i];
+        cin>>Original[i++];
     } while (Original[i]!='!');
-
-    Last=strlen(Original);
-
-    ReverseFunc(0, Last);
+    ReverseFunc(strlen(Original));
 }
