@@ -4,19 +4,18 @@ using namespace std;
 char Original[100];
 
 void ReverseFunc(int length_of_original) {
-    char ReversedString[100], LastChar, Length;
-    LastChar=Original[length_of_original-1];
-    for (int i = 0; i < length_of_original-1; ++i) {
-        ReversedString[i]=Original[i];
+    char LastChar, Length;
+    if(length_of_original==0){
+        return;
+    } else {
+        LastChar=Original[length_of_original-1];
+        cout<<LastChar;
+        Original[strlen(Original)-1]='\0';
+        ReverseFunc(strlen(Original));
     }
-    cout<<LastChar;
-    Length=strlen(ReversedString);
-    ReverseFunc(Length);
 }
 int main(){
-    int i=0;
-    do {
-        cin>>Original[i++];
-    } while (Original[i]!='!');
+    gets(Original);
+    Original[strlen(Original)-1]={'\0'};
     ReverseFunc(strlen(Original));
 }

@@ -1,15 +1,13 @@
 #include <iostream>
 using namespace std;
 int AckermannFunc(int m, int n){
-    int FuncReturn;
     if (m==0){
-        n++;
+        return ++n;
     } else if (m>0 && n==0){
-        FuncReturn=AckermannFunc(m-1, 1);
+        return AckermannFunc(m-1, 1);
     } else if (m>0 && n>0){
-        FuncReturn=AckermannFunc(m-1, AckermannFunc(m, n-1));
+        return AckermannFunc(m-1, AckermannFunc(m, n-1));
     }
-    return FuncReturn;
 }
 int main(){
     int m, n, a;

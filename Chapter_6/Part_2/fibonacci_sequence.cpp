@@ -13,7 +13,6 @@ int FibSum(int Index){
 int main(){
     int Input;
     cin>>Input;
-    FibSum(Input);
     for (int i = 0; i < Input; ++i){
         cout<<FibSum(i)<<" ";
     }
