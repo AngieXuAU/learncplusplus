@@ -1,6 +1,6 @@
-using namespace std;
 #include <cmath>
 #include <iostream>
+using namespace std;
 int Sqrt(int x, int n){
     if (n==1){
         return sqrt(1+x);

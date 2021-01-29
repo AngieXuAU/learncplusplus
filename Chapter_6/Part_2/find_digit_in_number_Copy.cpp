@@ -9,13 +9,19 @@ char DigitAt(int digit){
     if (digit==2){
         return NumberString[0];
     } else {
-        DigitAt(--digit);
+        digit--;
+        return DigitAt(digit);
     }
 }
 int main(){
     int DigitNo;
     gets(NumberString);
     cin>>DigitNo;
-    cout<<DigitAt(DigitNo);
+    if (DigitNo>strlen(NumberString)){
+        cout<<0;
+    }
+    else {
+        cout<<DigitAt(DigitNo);
+    }
     return 0;
 }
