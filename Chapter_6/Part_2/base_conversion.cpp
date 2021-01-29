@@ -1,26 +1,27 @@
+#include <cstring>
 #include <iostream>
 using namespace std;
-char ConvertCharacters[6]={'A', 'B', 'C', 'D', 'E', 'F'};
-int Convert(int Number, int Base){
-    int ConvertedN=0, Digit;
+char ConvertCharacters[6]={'A', 'B', 'C', 'D', 'E', 'F'}, BaseN[20];
+void Convert(int Number, int Base){
+    int Digit, i=0;
     if (Number==0){
-        return ConvertedN;
+        return;
     } else {
         Digit=Number%Base;
         Number/=Base;
         if (Digit>10){
             Digit=ConvertCharacters[Digit-11];
         }
-        ConvertedN+=Digit;
-        ConvertedN*=10;
+        BaseN[i]=char(Digit);
         Convert(Number, Base);
+        i++;
     }
-    return ConvertedN;
-
 }
 int main(){
-    int BaseNumber, Original, Converted;
+    int BaseNumber, Original;
     cin>>Original>>BaseNumber;
-    Converted=Convert(Original, BaseNumber);
-    cout<<Converted;
+    Convert(Original,BaseNumber);
+    for (int i = strlen(BaseN)-1; i >= 0; ++i) {
+        cout<<BaseN[i];
+    }
 }
