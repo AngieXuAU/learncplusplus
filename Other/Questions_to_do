@@ -1,0 +1,4 @@
+Enter any number k and any number of non-zero numbers from the keyboard (the number 0 is used to end the input).
+a) Find and print the product of those numbers that are less than k * k.
+b) Find and print on the screen the number of all numbers that belong to the interval [667, 999] and the sum of whose composite digits is divisible by 7 without remainder.
+c) Print the line 1, 3, 3, 4, 200, 199, 198, 197, 5, 6, 7, 8, 196, 195, 194, 193, ..... 97, 98, 99, 100 , 104, 103, 102, 101
