@@ -14,6 +14,6 @@ int main(){
     scanf("%f", &Centimetres);
     scanf("%f", &Metres);
     Distance1.Total=Add(Centimetres, Metres);
-    printf("Total distance: %f", Distance1.Total);
+    printf("Total distance: %f metres", Distance1.Total);
     return 0;
 }
