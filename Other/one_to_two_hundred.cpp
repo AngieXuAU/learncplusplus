@@ -1,15 +1,15 @@
-#include <cstdio>
+#include <iostream>
 using namespace std;
 void Output(int number1, int number2){
     int Index=4;
     if (number2>102){
         while (Index>=1) {
-            printf("%4d", ++number1);
+            cout<<++number1<<"\t";
             Index--;
         }
         Index=4;
         while (Index>=1){
-            printf("%4d", --number1);
+            cout<<--number2<<"\t";
             Index--;
         }
         Output(number1, number2);
