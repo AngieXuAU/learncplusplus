@@ -18,23 +18,24 @@ int main(){
     do {
         cin>>Input[Index];
     } while (Input[Index++]!=0);
-    for (int j = 0; j < Index; ++j) {
-        if (Input[j]<K*K && Input[j]!=0){
-            Product*=Input[j];
-        }
-    }
-    cout<<Product<<endl;
-    for (int j = 0; j < Index; ++j) {
+//    for (int j = 0; j < Index; ++j) {
+//        if (Input[j]<K*K && Input[j]!=0){
+//            Product*=Input[j];
+//        }
+//    }
+//    cout<<Product<<endl;
+
+    for (int j = 0; j < Index-1; ++j) {
         if (Input[j]>=667 && Input[j]<=999){
             cout<<Input[j]<<"\t";
         }
     }
-    cout<<endl;
-    for (int j = 0; j < Index; ++j) {
-        if (DigitSum(Input[j])%7==0 && Input[j]!=0){
-            cout<<Input[j]<<'\t';
-        }
-    }
-    cout<<endl;
+//    cout<<endl;
+//    for (int j = 0; j < Index; ++j) {
+//        if (DigitSum(Input[j])%7==0 && Input[j]!=0){
+//            cout<<Input[j]<<'\t';
+//        }
+//    }
+//    cout<<endl;
     return 0;
 }
