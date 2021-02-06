@@ -2,7 +2,7 @@
 using namespace std;
 void Output(int number1, int number2){
     int Index=4;
-    if (number2>102){
+    if (number2>101){
         while (Index>=1) {
             cout<<++number1<<"\t";
             Index--;
@@ -18,7 +18,7 @@ void Output(int number1, int number2){
     }
 }
 int main(){
-    int Number1=0, Number2=200;
+    int Number1=0, Number2=201;
     Output(Number1, Number2);
     return 0;
 }
