@@ -13,5 +13,5 @@ int main(){
     for (int i = 0; i < NumberOfStudents; ++i) {
         cin>>Students[i].StudentID>>Students[i].Score;
     }
-    cout<<Students[Find(RankedNth)].StudentID<<Students[Find(RankedNth)].Score;
+    cout<<Students[Find(RankedNth)].StudentID<<' '<<Students[Find(RankedNth)].Score;
 }
