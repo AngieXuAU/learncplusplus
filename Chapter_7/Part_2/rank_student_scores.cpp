@@ -1,4 +1,3 @@
-#include <cstring>
 #include <iostream>
 using namespace std;
 struct StudentInfo{
@@ -7,11 +6,11 @@ struct StudentInfo{
 }; StudentInfo IndividualStudent[20];
 int NumberOfStudents;
 int TopStudent(int a){
-    int TopScore=0, TopIndex;
+    int TopScore=0, TopIndex=0;
     for (int i = a; i < NumberOfStudents; ++i) {
-        if (IndividualStudent[i].Score>TopScore){
-            TopScore=IndividualStudent[i].Score;
-            TopIndex=i;
+        if (IndividualStudent[i].Score > TopScore) {
+            TopScore = IndividualStudent[i].Score;
+            TopIndex = i;
         }
     }
     return TopIndex;
@@ -22,6 +21,6 @@ int main(){
         cin>>IndividualStudent[i].Name>>IndividualStudent[i].Score;
     }
     for (int i = 0; i < NumberOfStudents; ++i) {
-        cout<<IndividualStudent[TopStudent(i)].Name<<' '<<IndividualStudent[TopStudent(i)].Score;
+        cout<<IndividualStudent[TopStudent(i)].Name<<' '<<IndividualStudent[TopStudent(i)].Score<<endl;
     }
 }
