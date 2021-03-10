@@ -1,11 +1,20 @@
 #include <iostream>
 using namespace std;
-int IntegerArray[3], *ArrayPointers[3];
-int FindIndexRanked(int ranked);
+int *NumberPA[3];
 int main(){
-    for (int i = 0; i < 2; ++i) {
-        cin>>IntegerArray[i];
-        ArrayPointers[i]=&IntegerArray[i];
+    int CompareL=0, CompareS, InputValue;
+    cout<<"Enter three integers"<<endl;
+    for (int i = 0; i < 3; ++i) {
+        cin>>InputValue;
+        if (i==0){
+            CompareS=InputValue;
+        }
+        NumberPA[i]=&InputValue;
+        if (*NumberPA[i]>CompareL){
+            CompareL=*NumberPA[i];
+        } else if (*NumberPA[i]<CompareS){
+            CompareS=*NumberPA[i];
+        }
     }
-    cout<<FindIndexRanked(0)<<"\t"<<FindIndexRanked(2);
+    cout<<CompareL<<"\t"<<CompareS;
 }
